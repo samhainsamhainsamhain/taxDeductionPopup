@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/taxDeductionPopup/static/css/main.4bb3c8be.css",
+    "main.js": "/taxDeductionPopup/static/js/main.63561703.js",
+    "static/media/close.svg": "/taxDeductionPopup/static/media/close.3f19b56cf85385b9ef016977e1f824c5.svg",
+    "index.html": "/taxDeductionPopup/index.html",
+    "main.4bb3c8be.css.map": "/taxDeductionPopup/static/css/main.4bb3c8be.css.map",
+    "main.63561703.js.map": "/taxDeductionPopup/static/js/main.63561703.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4bb3c8be.css",
+    "static/js/main.63561703.js"
+  ]
+}
