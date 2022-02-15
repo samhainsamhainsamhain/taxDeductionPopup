@@ -1,0 +1,46 @@
+input[type="radio"] {
+  width: 1px;
+  height: 1px;
+  opacity: 0.01;
+}
+
+input[type="radio"]:not(:checked) + label {
+  background-color: rgb(190, 190, 190);
+}
+
+input[type="radio"] + label {
+  padding: 10px 12px;
+  margin-right: 8px;
+  color: white;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  background-color: rgb(29, 172, 255);
+}
+
+.salarySubmit {
+  display: flex;
+  flex-direction: column;
+}
+
+.salarySubmitControl {
+  margin-bottom: 5vh;
+}
+
+.salarySubmitFinish {
+  border-radius: 20px;
+  color: white;
+  font-size: 24px;
+  padding: 4px;
+  background-color: rgb(29, 172, 255);
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+.salarySubmitFinish:hover {
+  background-color: rgb(29, 108, 255);
+}

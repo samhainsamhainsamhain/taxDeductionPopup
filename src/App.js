@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+import classes from "./App.module.css";
+import closeIcon from "./assets/close.svg";
+
+import SalaryForm from "./components/salaryForm/SalaryForm";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+  const [showPopup, setShowPopup] = useState(false);
+
+  const popup = (
+    <div className={classes.container}>
+      <button
+        className={classes.closeButton}
+        onClick={() => setShowPopup(!showPopup)}
+      >
+        <img className={classes.closeIcon} src={closeIcon} alt="close button" />
+      </button>
+      <section>
+        <h1 className={classes.title}>Налоговый вычет</h1>
+        <p className={classes.description}>
+          Используйте налоговый вычет чтобы погасить ипотеку досрочно. Размер
+          налогового вычета составляет не более 13% от своего официального
+          годового дохода.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </section>
+      <SalaryForm />
     </div>
   );
+
+  const greet = (
+    <div className={classes.greetScreen}>
+      <button
+        className={classes.greetButton}
+        onClick={() => setShowPopup(!showPopup)}
+      >
+        Налоговый вычет
+      </button>
+    </div>
+  );
+
+  return <div className={classes.app}>{showPopup ? popup : greet}</div>;
 }
 
 export default App;
